@@ -57,3 +57,55 @@
 html {
     scroll-behavior: smooth;
 }
+/* Update your .project-card class or add this below it */
+.project-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e1e4e8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* This makes the movement smooth */
+    cursor: pointer;
+}
+
+/* This triggers when the mouse moves over the card */
+.project-card:hover {
+    transform: translateY(-10px); /* Lifts the card up by 10 pixels */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a professional shadow */
+    border-color: #3498db; /* Changes the border to a nice 'Data Blue' */
+}
+/* Update your .btn class */
+.btn {
+    display: inline-block;
+    background: #2c3e50;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded pill shape looks more modern */
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #34495e;
+    transform: scale(1.05); /* Makes the button slightly larger */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Shrinks slightly when clicked for a 'button press' feel */
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply it to your sections */
+header, section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
