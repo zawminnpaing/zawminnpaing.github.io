@@ -1,10 +1,11 @@
 /* --- Global Styles --- */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #3498db;
-    --text-color: #333;
-    --light-bg: #f8f9fa;
-    --glass-bg: rgba(44, 62, 80, 0.9);
+    --primary-color: #1b4332; /* Deep Forest Green */
+    --accent-color: #2d6a4f;  /* Leaf Green */
+    --text-color: #2d3436;
+    --light-bg: #f0f4f1;      /* Mint White */
+    --glass-bg: rgba(27, 67, 50, 0.95);
+    --white: #ffffff;
 }
 
 * {
@@ -18,10 +19,11 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.6;
     color: var(--text-color);
-    padding-top: 70px; /* Space for sticky nav */
+    padding-top: 70px; 
+    background-color: var(--white);
 }
 
 .container {
@@ -32,13 +34,13 @@ body {
 
 .text-center { text-align: center; }
 
-/* --- Sticky Navigation (Freeze Pane) --- */
+/* --- Sticky Navigation --- */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 15px 0;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -53,7 +55,7 @@ body {
 .logo {
     font-size: 1.4rem;
     font-weight: bold;
-    color: white;
+    color: var(--white);
 }
 
 .nav-links {
@@ -62,183 +64,125 @@ body {
     gap: 10px;
 }
 
-/* Fancy Nav Buttons */
 .nav-btn {
     text-decoration: none;
-    color: #eee;
+    color: #e0e0e0;
     padding: 8px 18px;
     border-radius: 25px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
     border: 1px solid transparent;
 }
 
 .nav-btn:hover {
     background: var(--accent-color);
-    color: white;
-    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+    color: var(--white);
 }
 
-/* --- Hero Section with Gradient --- */
+/* --- Hero with Nature Gradient --- */
 .hero {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-    height: 60vh;
+    background: linear-gradient(135deg, #1b4332 0%, #40916c 55%, #ffffff 100%);
+    color: var(--white);
+    height: 65vh;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.3rem;
+    color: #d8f3dc;
     margin-bottom: 30px;
+    font-style: italic;
 }
 
-/* --- Buttons --- */
-.btn {
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
-    margin: 5px;
-}
-
-.btn-primary {
-    background: var(--accent-color);
-    color: white;
-}
-
-.btn-outline {
-    border: 2px solid white;
-    color: white;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* --- Sections --- */
-section {
-    padding: 80px 0;
-    scroll-margin-top: 80px;
-}
-
-.alt-bg { background: var(--light-bg); }
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.underline {
-    width: 60px;
-    height: 4px;
-    background: var(--accent-color);
-    margin: 10px auto;
-}
-
-/* --- About Grid --- */
+/* --- About Grid (Middle Aligned) --- */
 .about-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center; /* This aligns text and box to the vertical middle */
+    padding: 20px 0;
 }
 
 .skills-box {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    background: var(--white);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--accent-color);
 }
 
 .skills-list {
     list-style: none;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .skills-list li {
     margin-bottom: 12px;
     padding-left: 10px;
-    border-left: 3px solid var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    font-weight: bold;
 }
 
-/* --- Project Grid & Cards --- */
+/* --- Projects & Cards --- */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
 .project-card {
-    background: white;
+    background: var(--white);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid #eee;
-    transition: 0.3s all ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+    transition: 0.4s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(27, 67, 50, 0.1);
 }
 
 .result {
-    color: #27ae60;
+    color: #2d6a4f;
     font-weight: bold;
-    margin: 15px 0;
+    background: #d8f3dc;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
 }
 
-.view-link {
-    color: var(--accent-color);
+/* --- Buttons --- */
+.btn {
+    padding: 12px 32px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-/* --- Footer --- */
-footer {
-    background: #2c3e50;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
+.btn-primary { background: var(--accent-color); color: var(--white); }
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
 
-/* --- Animations --- */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* --- Layout Elements --- */
+section { padding: 90px 0; scroll-margin-top: 80px; }
+.alt-bg { background: var(--light-bg); }
+.underline { width: 80px; height: 4px; background: var(--accent-color); margin: 15px auto; }
 
-header, section {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
+footer { background: var(--primary-color); color: var(--white); padding: 50px 0; text-align: center; }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .nav-links { 
-        gap: 5px; 
-    }
-    .nav-btn {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-    .hero h1 { font-size: 1.8rem; }
-    .logo { font-size: 1.1rem; }
+    .about-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { gap: 5px; }
 }
