@@ -47,3 +47,10 @@
     font-weight: bold;
     text-decoration: underline;
 }
+.project-grid {
+    display: grid;
+    /* This creates 3 columns on big screens and 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    padding: 20px 0;
+}
