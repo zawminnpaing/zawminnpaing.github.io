@@ -232,7 +232,13 @@ header, section {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Simplified for mobile */
-    .about-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2rem; }
+    .nav-links { 
+        gap: 5px; 
+    }
+    .nav-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    .hero h1 { font-size: 1.8rem; }
+    .logo { font-size: 1.1rem; }
 }
