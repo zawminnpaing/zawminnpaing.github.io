@@ -1,111 +1,238 @@
-/* Add these to your existing CSS or replace it */
-.btn {
-    display: inline-block;
-    background: #2c3e50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+/* --- Global Styles --- */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --glass-bg: rgba(44, 62, 80, 0.9);
 }
 
-.btn:hover {
-    background: #34495e;
-}
-
-.skills ul {
-    list-style: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-.skills li {
-    background: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-left: 5px solid #2c3e50;
-}
-
-.project-image {
-    font-size: 50px;
-    text-align: center;
-    background: #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.result {
-    color: green;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.view-link {
-    display: block;
-    margin-top: 15px;
-    color: #2c3e50;
-    font-weight: bold;
-    text-decoration: underline;
-}
-.project-grid {
-    display: grid;
-    /* This creates 3 columns on big screens and 1 on mobile */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 25px;
-    padding: 20px 0;
-}
 html {
     scroll-behavior: smooth;
 }
-/* Update your .project-card class or add this below it */
-.project-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #e1e4e8;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* This makes the movement smooth */
-    cursor: pointer;
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    padding-top: 70px; /* Space for sticky nav */
 }
 
-/* This triggers when the mouse moves over the card */
-.project-card:hover {
-    transform: translateY(-10px); /* Lifts the card up by 10 pixels */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a professional shadow */
-    border-color: #3498db; /* Changes the border to a nice 'Data Blue' */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
 }
-/* Update your .btn class */
-.btn {
-    display: inline-block;
-    background: #2c3e50;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px; /* Rounded pill shape looks more modern */
+
+.text-center { text-align: center; }
+
+/* --- Sticky Navigation (Freeze Pane) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+/* Fancy Nav Buttons */
+.nav-btn {
+    text-decoration: none;
+    color: #eee;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-btn:hover {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* --- Hero Section with Gradient --- */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
 }
 
 .btn:hover {
-    background: #34495e;
-    transform: scale(1.05); /* Makes the button slightly larger */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.btn:active {
-    transform: scale(0.95); /* Shrinks slightly when clicked for a 'button press' feel */
+/* --- Sections --- */
+section {
+    padding: 80px 0;
+    scroll-margin-top: 80px;
 }
-/* Animation Keyframes */
+
+.alt-bg { background: var(--light-bg); }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 10px auto;
+}
+
+/* --- About Grid --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.skills-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.skills-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.skills-list li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* --- Project Grid & Cards --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: 0.3s all ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+
+.result {
+    color: #27ae60;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.view-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* --- Animations --- */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Apply it to your sections */
 header, section {
     animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Simplified for mobile */
+    .about-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
 }
