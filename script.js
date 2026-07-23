@@ -15,7 +15,8 @@ function showTab(tabName, sectionId = null) {
         setTimeout(function() {
             const section = document.getElementById(sectionId);
             if (section) {
-                const yOffset = -90; 
+                // Adjusted to account for the new layout spacing
+                const yOffset = -100; 
                 const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({top: y, behavior: 'smooth'});
             }
