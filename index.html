@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaw Min Paing - Resume</title>
-    <!-- Google Fonts for better typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,8 +21,8 @@
             <li><a href="#" onclick="showTab('resume', 'experience'); return false;"><i class="fas fa-briefcase"></i> Experience</a></li>
             <li><a href="#" onclick="showTab('resume', 'education'); return false;"><i class="fas fa-graduation-cap"></i> Education</a></li>
             <li><a href="#" onclick="showTab('resume', 'skills'); return false;"><i class="fas fa-tools"></i> Skills</a></li>
-            <li><a href="#" onclick="showTab('resume', 'achievements'); return false;"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="#" onclick="showTab('resume', 'gallery'); return false;"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="#" onclick="showTab('resume', 'achievements'); return false;"><i class="fas fa-medal"></i> Achievements</a></li>
+            <li><a href="#" onclick="showTab('resume', 'languages'); return false;"><i class="fas fa-language"></i> Languages</a></li>
             <li><a href="#" onclick="showTab('knowledge'); return false;"><i class="fas fa-lightbulb"></i> Knowledge Sharing</a></li>
         </ul>
     </nav>
@@ -32,7 +32,8 @@
         
         <!-- Header / Personal Details -->
         <header class="profile-header">
-            <img src="Files/Profile1.jpg" alt="Zaw Min Paing" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+            <!-- Updated to Files directory -->
+            <img src="Files/Profile2.jpg" alt="Zaw Min Paing" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
             <h1>Zaw Min Paing</h1>
             <p class="tagline">Telecom Network & NOC Management Professional 🌐</p>
             <div class="contact-info">
@@ -145,50 +146,62 @@
             </div>
         </section>
 
-        <!-- Achievements & Languages -->
-        <section id="achievements" class="fade-in split-section">
-            <div class="half-width">
-                <h2><i class="fas fa-medal text-gradient"></i> Achievements</h2>
-                <ul class="achievement-list">
-                    <li><i class="fas fa-star text-gold"></i> <strong>Best Employee of the Year 2023</strong> <br> Viettel Construction Myanmar 🏆</li>
-                    <li><i class="fas fa-star text-gold"></i> <strong>Excellent Employee of 2nd Quarter 2023</strong> <br> Viettel Construction Myanmar 🏅</li>
-                </ul>
-            </div>
-            
-            <div class="half-width" id="languages">
-                <h2><i class="fas fa-language text-gradient"></i> Languages</h2>
-                <ul class="language-list">
-                    <li>🇲🇲 <strong>Burmese</strong> - Fluent</li>
-                    <li>🇬🇧 <strong>English</strong> - Professional</li>
-                    <li>🇮🇳 <strong>Hindi</strong> - Fluent</li>
-                </ul>
+        <!-- Achievements -->
+        <section id="achievements" class="fade-in">
+            <h2><i class="fas fa-medal text-gradient"></i> Achievements</h2>
+            <div class="achievements-grid">
+                
+                <div class="achievement-card">
+                    <img src="Files/1Q2025.jpg" alt="1st Quarter 2025" class="achievement-img ratio-4-3" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+1Q2025.jpg'">
+                    <div class="achievement-info">
+                        <h4>Excellent Employee of 1st Quarter 2025</h4>
+                        <p>Viettel Construction Myanmar</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <img src="Files/1Q2024.jpg" alt="1st Quarter 2024" class="achievement-img ratio-4-3" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+1Q2024.jpg'">
+                    <div class="achievement-info">
+                        <h4>Excellent Employee of 1st Quarter 2024</h4>
+                        <p>Viettel Construction Myanmar</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <img src="Files/1BST2023.jpg" alt="Best Employee 2023" class="achievement-img ratio-3-4" onerror="this.src='https://via.placeholder.com/300x400?text=Upload+1BST2023.jpg'">
+                    <div class="achievement-info">
+                        <h4>Best Employee of Year 2023</h4>
+                        <p>Viettel Construction Myanmar</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <img src="Files/2Q2023.jpg" alt="2nd Quarter 2023" class="achievement-img ratio-4-3" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+2Q2023.jpg'">
+                    <div class="achievement-info">
+                        <h4>Excellent Employee of 2nd Quarter 2023</h4>
+                        <p>Viettel Construction Myanmar</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <img src="Files/4Q2022.jpg" alt="4th Quarter 2022" class="achievement-img ratio-4-3" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+4Q2022.jpg'">
+                    <div class="achievement-info">
+                        <h4>Excellent Employee of 4th Quarter 2022</h4>
+                        <p>Viettel Construction Myanmar</p>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
-        <!-- Memory Gallery Section (New!) -->
-        <section id="gallery" class="fade-in">
-            <h2><i class="fas fa-camera-retro text-gradient"></i> Memory Gallery</h2>
-            <div class="gallery-container">
-                <div class="gallery-track">
-                    <!-- SET 1: Upload your memory images to your "images" folder -->
-                    <img src="Files/vcm_mem.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo7.jpg'">
-                    <img src="Files/vcm1.jpg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo1.jpg'">
-                    <img src="Files/vcm2.jpg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo2.jpg'">
-                    <img src="Files/vcm3.jpg" alt="Memory 3" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo3.jpg'">
-                    <img src="Files/vcm4.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo4.jpg'">
-                    <img src="Files/vcm5.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo5.jpg'">
-                    <img src="Files/gbn2.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo6.jpg'">
-                    
-                    <!-- SET 2: DUPLICATE THE EXACT SAME IMAGES FOR A SEAMLESS LOOP -->
-                    <img src="Files/vcm_mem.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo7.jpg'">
-                    <img src="Files/vcm1.jpg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo1.jpg'">
-                    <img src="Files/vcm2.jpg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo2.jpg'">
-                    <img src="Files/vcm3.jpg" alt="Memory 3" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo3.jpg'">
-                    <img src="Files/vcm4.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo4.jpg'">
-                    <img src="Files/vcm5.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo5.jpg'">
-                    <img src="Files/gbn2.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo6.jpg'">
-                </div>
-            </div>
+        <!-- Languages -->
+        <section id="languages" class="fade-in">
+            <h2><i class="fas fa-language text-gradient"></i> Languages</h2>
+            <ul class="language-list">
+                <li>🇲🇲 <strong>Burmese</strong> - Fluent</li>
+                <li>🇬🇧 <strong>English</strong> - Professional</li>
+                <li>🇮🇳 <strong>Hindi</strong> - Fluent</li>
+            </ul>
         </section>
 
     </main>
