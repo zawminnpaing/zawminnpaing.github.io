@@ -28,3 +28,30 @@ function showTab(tabName, sectionId = null) {
         });
     }
 }
+
+// 4. Scroll Reveal Animation Logic
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up the options for the observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Triggers when 15% of the section is visible on screen
+    };
+
+    // Create the observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the 'visible' class to trigger the CSS animation
+                entry.target.classList.add('visible');
+                
+                // Optional: Stop observing once it's visible so it doesn't fade out and in repeatedly
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    // Grab all sections with the 'fade-in' class and observe them
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
+});
