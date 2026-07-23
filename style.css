@@ -62,6 +62,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-links li {
@@ -81,6 +82,22 @@ body {
 .nav-links a:hover {
     color: #ffffff;
     background-color: rgba(0, 229, 255, 0.15);
+}
+
+/* Specific Style for the Download PDF Button */
+.download-btn {
+    background: rgba(0, 229, 255, 0.15) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+    margin-left: 10px;
+    font-weight: 600 !important;
+}
+
+.download-btn:hover {
+    background: var(--primary-color) !important;
+    color: #06113C !important; /* Dark text for contrast on hover */
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
 /* Main Container - Adjusted to be transparent, holding the dark sections */
@@ -178,7 +195,7 @@ h2 {
 }
 
 .text-gradient {
-    color: var(--primary-color); /* Kept solid for better dark mode visibility */
+    color: var(--primary-color);
 }
 
 h3 {
@@ -356,7 +373,7 @@ li {
 .gallery-track {
     display: flex;
     width: max-content;
-    animation: scrollGallery 25s linear infinite; /* Slowed down slightly for smoother viewing */
+    animation: scrollGallery 25s linear infinite;
     gap: 20px;
     padding-left: 20px; 
 }
