@@ -222,6 +222,18 @@ h3 {
     background: rgba(0, 0, 0, 0.3);
 }
 
+/* Company Links Styling */
+.company-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.company-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .date-badge {
     display: inline-block;
     background: rgba(0, 229, 255, 0.15);
