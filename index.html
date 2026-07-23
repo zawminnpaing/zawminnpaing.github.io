@@ -16,13 +16,14 @@
     <nav class="navbar">
         <div class="nav-brand">ZMP 🚀</div>
         <ul class="nav-links">
-            <li><a href="#" onclick="showTab('resume')"><i class="fas fa-file-alt"></i> Resume</a></li>
-            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-            <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="#" onclick="showTab('knowledge')"><i class="fas fa-lightbulb"></i> Knowledge Sharing</a></li>
+            <li><a href="#" onclick="showTab('resume'); return false;"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="#" onclick="showTab('resume', 'about'); return false;"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#" onclick="showTab('resume', 'experience'); return false;"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#" onclick="showTab('resume', 'education'); return false;"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#" onclick="showTab('resume', 'skills'); return false;"><i class="fas fa-tools"></i> Skills</a></li>
+            <li><a href="#" onclick="showTab('resume', 'achievements'); return false;"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="#" onclick="showTab('resume', 'gallery'); return false;"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="#" onclick="showTab('knowledge'); return false;"><i class="fas fa-lightbulb"></i> Knowledge Sharing</a></li>
         </ul>
     </nav>
 
@@ -31,8 +32,7 @@
         
         <!-- Header / Personal Details -->
         <header class="profile-header">
-            <!-- Profile Image Placeholder -->
-            <img src="https://via.placeholder.com/150" alt="Zaw Min Paing" class="profile-img">
+            <img src="images/profile.jpg" alt="Zaw Min Paing" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
             <h1>Zaw Min Paing</h1>
             <p class="tagline">Telecom Network & NOC Management Professional 🌐</p>
             <div class="contact-info">
@@ -57,7 +57,7 @@
             <div class="job-card">
                 <h3>SLA Manager 🏢 Global Technology Co. Ltd.</h3>
                 <span class="date-badge"><i class="fas fa-calendar-alt"></i> 08/2025 - 03/2026</span>
-                <img src="https://via.placeholder.com/800x250?text=Global+Technology+Image" alt="Global Technology placeholder" class="company-image">
+                <img src="images/global-tech.jpg" alt="Global Technology" class="company-image" onerror="this.src='https://via.placeholder.com/800x250?text=Global+Technology+Image'">
                 <ul>
                     <li>Collaborated with cross-functional teams to monitor SLA Metrics and address the service issues.</li>
                     <li>Refined SLA Terms for enterprise contracts.</li>
@@ -70,7 +70,7 @@
             <div class="job-card">
                 <h3>NOC Shift Leader 🏢 Viettel Construction Myanmar</h3>
                 <span class="date-badge"><i class="fas fa-calendar-alt"></i> 10/2022 - 07/2025</span>
-                <img src="https://via.placeholder.com/800x250?text=Viettel+Construction+Image" alt="Viettel placeholder" class="company-image">
+                <img src="images/viettel1.jpg" alt="Viettel Construction" class="company-image" onerror="this.src='https://via.placeholder.com/800x250?text=Viettel+Construction+Image'">
                 <ul>
                     <li>Ensure optimal network service availability and operational efficiency across the organization, achieving 99.9% availability to enhance customer satisfaction and meet SLA targets.</li>
                     <li>Orchestrated the Telecom O&M Project with a team of 20 NOC shift members, overseeing the management of BTS sites and fiber cable routes across 16 branches.</li>
@@ -86,7 +86,7 @@
             <div class="job-card">
                 <h3>NOC Engineer 🏢 Viettel Construction Myanmar</h3>
                 <span class="date-badge"><i class="fas fa-calendar-alt"></i> 11/2020 - 10/2022</span>
-                <img src="https://via.placeholder.com/800x250?text=Viettel+Construction+(Engineer)+Image" alt="Viettel placeholder" class="company-image">
+                <img src="images/viettel2.jpg" alt="Viettel Construction Engineer" class="company-image" onerror="this.src='https://via.placeholder.com/800x250?text=Viettel+Construction+(Engineer)+Image'">
                 <ul>
                     <li>Ensure seamless operation and optimal performance of network infrastructure, deliver timely reports and resolving network issues to enhance customer satisfaction.</li>
                     <li>Implemented proactive monitoring strategies to swiftly detect and analyze alarms at BTS stations, encompassing radio, power, and transmission issues, ensuring minimal service disruption ⚡.</li>
@@ -112,7 +112,7 @@
             </div>
         </section>
 
-        <!-- Skills (Encapsulated Pills) -->
+        <!-- Skills -->
         <section id="skills" class="fade-in">
             <h2><i class="fas fa-cogs text-gradient"></i> Skills</h2>
             
@@ -162,6 +162,26 @@
                     <li>🇬🇧 <strong>English</strong> - Professional</li>
                     <li>🇮🇳 <strong>Hindi</strong> - Fluent</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Memory Gallery Section (New!) -->
+        <section id="gallery" class="fade-in">
+            <h2><i class="fas fa-camera-retro text-gradient"></i> Memory Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-track">
+                    <!-- SET 1: Upload your memory images to your "images" folder -->
+                    <img src="images/memo1.jpg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo1.jpg'">
+                    <img src="images/memo2.jpg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo2.jpg'">
+                    <img src="images/memo3.jpg" alt="Memory 3" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo3.jpg'">
+                    <img src="images/memo4.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo4.jpg'">
+                    
+                    <!-- SET 2: DUPLICATE THE EXACT SAME IMAGES FOR A SEAMLESS LOOP -->
+                    <img src="images/memo1.jpg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo1.jpg'">
+                    <img src="images/memo2.jpg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo2.jpg'">
+                    <img src="images/memo3.jpg" alt="Memory 3" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo3.jpg'">
+                    <img src="images/memo4.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+memo4.jpg'">
+                </div>
             </div>
         </section>
 
