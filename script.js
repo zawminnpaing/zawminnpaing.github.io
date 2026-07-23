@@ -9,4 +9,10 @@ function showTab(tabName) {
     } else if (tabName === 'knowledge') {
         document.getElementById('knowledge-tab').style.display = 'block';
     }
+    
+    // Smoothly scroll back to the top when changing tabs
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
